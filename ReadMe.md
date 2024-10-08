@@ -38,7 +38,7 @@ This will install the following dependencies:
 - Flask-Cors == 3.0.10
 - Pillow == 10.2.0
 - Werkzeug == 2.0
-- itsdangerous == 1.1.0
+- itsdangerous == 2.0
 - click == 7.1.2
 - Pandas == 2.0.1
 - piexif == 1.1.3
