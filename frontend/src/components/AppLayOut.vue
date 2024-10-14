@@ -81,7 +81,11 @@
               class="grid-item"
             >
               <img
+<<<<<<< HEAD
                 :src="`${apiUrl}/images/${result.filename}`"
+=======
+                :src="`http://localhost:5000/images/${result.filename}`"
+>>>>>>> upstream/main
                 alt="Image preview"
                 class="image-preview"
               />
@@ -89,7 +93,11 @@
                 <p>
                   <strong>File:</strong>
                   <a
+<<<<<<< HEAD
                     :href="`${apiUrl}/images/${result.filename}`"
+=======
+                    :href="`http://localhost:5000/images/${result.filename}`"
+>>>>>>> upstream/main
                     target="_blank"
                     >{{ result.filename }}</a
                   >
@@ -163,7 +171,10 @@ export default {
       map: null,
       showConfirmationPopup: false, // Track popup visibility
       feedbackData: null, // Store feedback to submit after confirmation
+<<<<<<< HEAD
       apiUrl: process.env.VUE_APP_API_URL, // Define apiUrl here
+=======
+>>>>>>> upstream/main
     };
   },
   watch: {
@@ -193,9 +204,12 @@ export default {
             .join("; ")
         : "";
     },
+<<<<<<< HEAD
     // apiUrl() {
     //   return process.env.VUE_APP_API_URL;
     // },
+=======
+>>>>>>> upstream/main
   },
   methods: {
     handleUploadImages() {
@@ -211,7 +225,11 @@ export default {
 
       try {
         const response = await axios.post(
+<<<<<<< HEAD
           `${this.apiUrl}/upload-images`,
+=======
+          "http://localhost:5000/upload-images",
+>>>>>>> upstream/main
           formData,
           {
             headers: {
@@ -219,13 +237,22 @@ export default {
             },
           }
         );
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
         this.classificationResults = Object.values(
           response.data.results
         ).flat();
         this.isLoading = false;
         this.notificationMessage = response.data.message;
+<<<<<<< HEAD
         this.downloadLinkCsv = `${this.apiUrl}/results.csv`;
         this.downloadLinkGeoJson = `${this.apiUrl}/results.geojson`;
+=======
+        this.downloadLinkCsv = `http://localhost:5000/results.csv`;
+        this.downloadLinkGeoJson = `http://localhost:5000/results.geojson`;
+>>>>>>> upstream/main
         this.updateMapWithResults(this.classificationResults);
       } catch (error) {
         console.error("Error uploading files:", error);
@@ -274,8 +301,13 @@ export default {
           const markerColor = markerColors[result.classification] || "green";
           const popupContent = `
             <div>
+<<<<<<< HEAD
               <img src="${this.apiUrl}/images/${result.filename}" style="width:100px;"><br>
               <strong>File:</strong> <a href="${this.apiUrl}/images/${result.filename}" target="_blank">${result.filename}</a><br>
+=======
+              <img src="http://localhost:5000/images/${result.filename}" style="width:100px;"><br>
+              <strong>File:</strong> <a href="http://localhost:5000/images/${result.filename}" target="_blank">${result.filename}</a><br>
+>>>>>>> upstream/main
               <strong>Prediction:</strong> ${result.prediction}<br>
               <strong>Category:</strong> ${result.classification}<br>
               <strong>Latitude:</strong> ${result.latitude}<br>
@@ -318,7 +350,11 @@ export default {
     submitFeedback(isConfirmed) {
       if (isConfirmed) {
         axios
+<<<<<<< HEAD
           .post(`${this.apiUrl}/submit-feedback`, this.feedbackData)
+=======
+          .post("http://localhost:5000/submit-feedback", this.feedbackData)
+>>>>>>> upstream/main
           .then((response) => {
             console.log("Feedback submitted:", response.data);
           })
