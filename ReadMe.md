@@ -18,7 +18,6 @@ Backend Setup (Flask)
 First, create a virtual environment to isolate the project dependencies. Use the following commands in your terminal or PowerShell:
 
  Create a virtual environment
-<<<<<<< HEAD
  py -m venv "E:\Research\Vue-Flusk\dnr\venv" (for windows)
  python3 -m venv myenv (for Mac)
 
@@ -26,13 +25,6 @@ First, create a virtual environment to isolate the project dependencies. Use the
 .\venv\Scripts\Activate.ps1 (for Windows PowerShell)
 
 source myenv/bin/activate (for Mac)
-=======
-py -m venv "E:\Research\Vue-Flusk\dnr\venv"
-
- Activate the virtual environment (for Windows PowerShell)
-.\venv\Scripts\Activate.ps1
-
->>>>>>> upstream/main
 
 This command will create and activate a virtual environment in your project directory.
 
@@ -56,7 +48,6 @@ This will install the following dependencies:
 - opencv-python == 4.8.0.74
 - numpy == 1.24.3
 
-<<<<<<< HEAD
  Step 3: After installing the dependencies, navigate to the backend directory, create a .env file in the backend directory:
 
     cd backend
@@ -69,13 +60,6 @@ This will install the following dependencies:
 
  Step 4: Running the Backend
 
-=======
- Step 3: Running the Backend
-
-After installing the dependencies, navigate to the backend directory and run the Flask application:
-
-cd backend
->>>>>>> upstream/main
 py main.py
 
 The backend will start, and the server will be running on `localhost:5000`. This will be the core API that the frontend interacts with for processing images and predictions.
@@ -102,16 +86,12 @@ npm install
 
 This will install all the required `node_modules` for the VueJS frontend, including any necessary libraries for building the interface and making API requests to the backend.
 
-<<<<<<< HEAD
  Step 4: Create a .env file in the frontend folder and add the following content in it:
 
 VUE_APP_API_URL=http://127.0.0.1:5000
 
 
  Step 5: Run the Frontend
-=======
- Step 4: Run the Frontend
->>>>>>> upstream/main
 
 After installing the dependencies, start the VueJS development server using:
 
