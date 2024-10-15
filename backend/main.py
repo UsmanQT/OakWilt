@@ -13,6 +13,10 @@ import json
 from dotenv import load_dotenv
 
 app = Flask(__name__)
+
+# Load environment variables from .env file
+load_dotenv()
+
 CORS(app, resources={r"/*": {'origins': "*"}})
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
@@ -25,9 +29,6 @@ MODEL_PATH = "/Users/usmanq/GVSU/Staff Scientist/OakWilt/Model Backup/oak_wilt_d
 FEEDBACK_FILE_PATH = os.path.join(DESTINATION_PATH, 'feedback.json')
 
 logging.basicConfig(level=logging.INFO)
-
-# Load environment variables from .env file
-load_dotenv()
 
 # Load the model
 model = tf.keras.models.load_model(MODEL_PATH)

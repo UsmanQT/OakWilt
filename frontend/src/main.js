@@ -14,6 +14,7 @@ const auth = getAuth(app);
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
+Vue.prototype.$auth = auth;
 
 new Vue({
   router,
