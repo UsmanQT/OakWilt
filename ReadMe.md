@@ -96,6 +96,7 @@ const firebaseConfig = {
 
 export default firebaseConfig;
 
+```
 
  #### Step 5: Run the Frontend
 
