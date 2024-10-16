@@ -1,8 +1,8 @@
-Oak Wilt Detection Project: Setup and Running Guide
+# Oak Wilt Detection Project: Setup and Running Guide
 
 This README provides a step-by-step guide on how to set up and run the Oak Wilt Detection project, which consists of a Flask backend and a VueJS frontend.
 
-Prerequisites
+## Prerequisites
 
 Before starting, ensure you have the following installed:
 
@@ -11,24 +11,23 @@ Before starting, ensure you have the following installed:
 
 ---
 
-Backend Setup (Flask)
+### Backend Setup (Flask)
 
- Step 1: Create a Virtual Environment (venv)
+ #### Step 1: Create a Virtual Environment (venv)
 
 First, create a virtual environment to isolate the project dependencies. Use the following commands in your terminal or PowerShell:
 
- Create a virtual environment
- py -m venv "E:\Research\Vue-Flusk\dnr\venv" (for windows)
- python3 -m venv myenv (for Mac)
+ ##### Mac
+ python3 -m venv myenv
+ source myenv/bin/activate
 
- Activate the virtual environment
-.\venv\Scripts\Activate.ps1 (for Windows PowerShell)
-
-source myenv/bin/activate (for Mac)
+ #### Windows
+ py -m venv "E:\Research\Vue-Flusk\dnr\venv"
+.\venv\Scripts\Activate.ps1
 
 This command will create and activate a virtual environment in your project directory.
 
- Step 2: Install Backend Dependencies
+ #### Step 2: Install Backend Dependencies
 
 Once the virtual environment is active, install the required dependencies by running the following command inside your project directory where the `requirements.txt` file is located:
 
@@ -48,7 +47,7 @@ This will install the following dependencies:
 - opencv-python == 4.8.0.74
 - numpy == 1.24.3
 
- Step 3: After installing the dependencies, navigate to the backend directory, create a .env file in the backend directory:
+ #### Step 3: After installing the dependencies, navigate to the backend directory, create a .env file in the backend directory:
 
     cd backend
 
@@ -58,27 +57,27 @@ This will install the following dependencies:
     FLASK_RUN_PORT=5000
 
 
- Step 4: Running the Backend
+ #### Step 4: Running the Backend
 
 py main.py
 
 The backend will start, and the server will be running on `localhost:5000`. This will be the core API that the frontend interacts with for processing images and predictions.
 
-Frontend Setup (VueJS)
+### Frontend Setup (VueJS)
 
- Step 1: Install Vue CLI
+ #### Step 1: Install Vue CLI
 
 Make sure you have Vue CLI installed globally on your system. If not, you can install it using the following command:
 
 npm install -g @vue/cli
 
- Step 2: Navigate to the Frontend Directory
+ #### Step 2: Navigate to the Frontend Directory
 
 Navigate to the `frontend` folder to install dependencies:
 
 cd frontend
 
- Step 3: Install Node Modules
+ #### Step 3: Install Node Modules
 
 To install the necessary dependencies for the frontend, run:
 
@@ -86,12 +85,11 @@ npm install
 
 This will install all the required `node_modules` for the VueJS frontend, including any necessary libraries for building the interface and making API requests to the backend.
 
- Step 4: Create a .env file in the frontend folder and add the following content in it:
+ #### Step 4: Create a .env file in the frontend folder and add the following content in it:
 
 VUE_APP_API_URL=http://127.0.0.1:5000
 
-
- Step 5: Run the Frontend
+ #### Step 5: Run the Frontend
 
 After installing the dependencies, start the VueJS development server using:
 
