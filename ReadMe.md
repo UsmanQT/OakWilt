@@ -17,7 +17,7 @@ Before starting, ensure you have the following installed:
 
 First, create a virtual environment to isolate the project dependencies. Use the following commands in your terminal or PowerShell:
 
- ##### Mac
+ #### Mac
  python3 -m venv venv  
  source venv/bin/activate  
 
@@ -84,13 +84,13 @@ This will install all the required `node_modules` for the VueJS frontend, includ
 
  The firebase.js file should look like this.
 
- const firebaseConfig = {
-  apiKey: "",  
-  authDomain: "",  
-  projectId: "",  
-  storageBucket: "",  
-  messagingSenderId: "",  
-  appId: "",  
+ const firebaseConfig = {  
+    apiKey: "",  
+    authDomain: "",  
+    projectId: "",  
+    storageBucket: "",  
+    messagingSenderId: "",  
+    appId: "",  
 };
 
 export default firebaseConfig;
