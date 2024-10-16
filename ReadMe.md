@@ -18,12 +18,12 @@ Before starting, ensure you have the following installed:
 First, create a virtual environment to isolate the project dependencies. Use the following commands in your terminal or PowerShell:
 
  ##### Mac
- python3 -m venv myenv
- source myenv/bin/activate
+ python3 -m venv myenv  
+ source myenv/bin/activate  
 
  #### Windows
- py -m venv "E:\Research\Vue-Flusk\dnr\venv"
-.\venv\Scripts\Activate.ps1
+ py -m venv "E:\Research\Vue-Flusk\dnr\venv"  
+.\venv\Scripts\Activate.ps1  
 
 This command will create and activate a virtual environment in your project directory.
 
@@ -46,22 +46,13 @@ This will install the following dependencies:
 - tensorflow == 2.16.1
 - opencv-python == 4.8.0.74
 - numpy == 1.24.3
+- python-dotenv == 1.0.1
 
- #### Step 3: After installing the dependencies, navigate to the backend directory, create a .env file in the backend directory:
-
-    cd backend
-
-    After creating .env file, add these lines in it:
-
-    FLASK_RUN_HOST=127.0.0.1
-    FLASK_RUN_PORT=5000
-
-
- #### Step 4: Running the Backend
+ #### Step 3: Running the Backend
 
 py main.py
 
-The backend will start, and the server will be running on `localhost:5000`. This will be the core API that the frontend interacts with for processing images and predictions.
+The backend will start, and the server will be running on `localhost:5000`. This will be the core API that the frontend interacts with for processing images and predictions. You can edit the configuration settings by editing the .env file.
 
 ### Frontend Setup (VueJS)
 
@@ -85,9 +76,25 @@ npm install
 
 This will install all the required `node_modules` for the VueJS frontend, including any necessary libraries for building the interface and making API requests to the backend.
 
- #### Step 4: Create a .env file in the frontend folder and add the following content in it:
+ #### Step 4: Add your firebase configs to the project
 
-VUE_APP_API_URL=http://127.0.0.1:5000
+ Create a configs directory and create a firebase.js file in it.
+
+ Now from your firebase console account, create a project and copy the configuration information.
+
+ The firebase.js file should look like this.
+
+ const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+};
+
+export default firebaseConfig;
+
 
  #### Step 5: Run the Frontend
 
